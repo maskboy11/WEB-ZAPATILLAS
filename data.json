@@ -1,0 +1,66 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Nike Air City",
+      "marca": "Nike",
+      "precio": 139.99,
+      "imagenes": [
+        "https://images.pexels.com/photos/2529150/pexels-photo-2529150.jpeg",
+        "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg",
+        "https://images.pexels.com/photos/2529149/pexels-photo-2529149.jpeg"
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Nike Court Pulse",
+      "marca": "Nike",
+      "precio": 119.99,
+      "imagenes": [
+        "https://images.pexels.com/photos/1456733/pexels-photo-1456733.jpeg",
+        "https://images.pexels.com/photos/19090/pexels-photo.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Adidas Street Drive",
+      "marca": "Adidas",
+      "precio": 129.99,
+      "imagenes": [
+        "https://images.pexels.com/photos/2529149/pexels-photo-2529149.jpeg",
+        "https://images.pexels.com/photos/267202/pexels-photo-267202.jpeg"
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Adidas Cloudstep",
+      "marca": "Adidas",
+      "precio": 149.99,
+      "imagenes": [
+        "https://images.pexels.com/photos/50855/pexels-photo-50855.jpeg",
+            "https://images.pexels.com/photos/1032110/pexels-photo-1032110.jpeg"
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "New Balance Metro 550",
+      "marca": "New Balance",
+      "precio": 134.99,
+      "imagenes": [
+        "https://images.pexels.com/photos/2529151/pexels-photo-2529151.jpeg",
+        "https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg"
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "New Balance Cityrunner",
+      "marca": "New Balance",
+      "precio": 159.99,
+      "imagenes": [
+        "https://images.pexels.com/photos/1598508/pexels-photo-1598508.jpeg",
+        "https://images.pexels.com/photos/1032110/pexels-photo-1032110.jpeg"
+      ]
+    }
+  ],
+  "pedidos": []
+}

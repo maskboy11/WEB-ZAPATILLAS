@@ -1,0 +1,475 @@
+/* ================= RESET ================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f6f7fb;
+  color: #111827;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+.uk-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.uk-header__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.uk-logo {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+}
+
+.uk-logo__tagline {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.uk-nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.uk-nav__link {
+  border: none;
+  background: transparent;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #374151;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.uk-nav__link:hover {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.uk-nav__cart {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.uk-cart-count {
+  background-color: #111827;
+  color: #f9fafb;
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+  font-size: 0.75rem;
+}
+
+/* ================= LAYOUT MAIN ================= */
+.uk-main {
+  flex: 1;
+  padding: 1.4rem 1.1rem 2.2rem;
+}
+
+/* ================= SECCIONES ================= */
+.uk-section {
+  display: none;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.uk-section--active {
+  display: block;
+}
+
+.uk-section__header {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.uk-section__header--back {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.uk-section__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.uk-section__subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* ================= BOTONES ================= */
+.uk-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.uk-btn--primary {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.uk-btn--primary:hover {
+  background-color: #1f2937;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.25);
+}
+
+.uk-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.uk-link-back {
+  border: none;
+  background: none;
+  color: #6b7280;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.uk-link-back:hover {
+  color: #111827;
+}
+
+/* ================= GRID ================= */
+.uk-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.uk-grid--brands {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.uk-grid--products {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+/* ================= CARDS MARCA ================= */
+.uk-brand-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 120px;
+}
+
+.uk-brand-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.12);
+  border-color: #111827;
+}
+
+.uk-brand-card__name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.uk-brand-card__label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.uk-brand-card__tag {
+  margin-top: 0.7rem;
+  align-self: flex-start;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+/* ================= CARDS PRODUCTO ================= */
+.uk-product-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.uk-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
+  border-color: #111827;
+}
+
+.uk-product-card__media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, #fef3c7, #e5e7eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uk-product-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uk-product-card__body {
+  padding: 0.9rem 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.uk-product-card__name {
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.uk-product-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.uk-product-card__brand {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.uk-product-card__price {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* ================= DETALLE PRODUCTO ================= */
+.uk-product {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.uk-product__gallery {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  padding: 0.85rem;
+}
+
+.uk-product__main-img {
+  width: 100%;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e5e7eb, #fef3c7);
+}
+
+.uk-product__main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uk-product__thumbs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.uk-thumb {
+  border-radius: 0.6rem;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+}
+
+.uk-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uk-thumb--active {
+  border-color: #111827;
+}
+
+.uk-product__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.85rem 0.2rem;
+}
+
+.uk-product__brand {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.uk-product__name {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.uk-product__price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.8rem 0 1rem;
+}
+
+/* Desktop detalle */
+@media (min-width: 768px) {
+  .uk-product {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  }
+}
+
+/* ================= CARRITO ================= */
+.uk-cart {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  padding: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 80px;
+}
+
+.uk-cart-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.uk-cart-item__img-wrap {
+  width: 70px;
+  height: 70px;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.uk-cart-item__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uk-cart-item__info {
+  font-size: 0.85rem;
+}
+
+.uk-cart-item__info span {
+  display: block;
+}
+
+.uk-cart-item__price {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.uk-cart-item__remove {
+  border: none;
+  background: none;
+  font-size: 0.8rem;
+  color: #ef4444;
+  cursor: pointer;
+}
+
+.uk-cart__footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ================= FORMULARIO ================= */
+.uk-form {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  max-width: 560px;
+}
+
+.uk-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.7rem;
+}
+
+.uk-form__group label {
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.uk-form__group input,
+.uk-form__group textarea {
+  border-radius: 0.6rem;
+  border: 1px solid #d1d5db;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+.uk-form__group textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.uk-form__message {
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}
+
+/* ================= FOOTER ================= */
+.uk-footer {
+  padding: 1rem 1.2rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+}

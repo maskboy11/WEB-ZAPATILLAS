@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>UrbanKicks - Catálogo de Zapatillas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="uk-header">
+    <div class="uk-header__left">
+      <span class="uk-logo">UrbanKicks</span>
+      <span class="uk-logo__tagline">Sneakers & Streetwear</span>
+    </div>
+    <nav class="uk-nav">
+      <button id="nav-home" class="uk-nav__link">Marcas</button>
+      <button id="nav-cart" class="uk-nav__link uk-nav__cart">
+        Carrito
+        <span id="cart-count" class="uk-cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="uk-main">
+    <!-- HOME: GRID DE MARCAS -->
+    <section id="brands-section" class="uk-section uk-section--active" aria-label="Marcas">
+      <div class="uk-section__header">
+        <h1 class="uk-section__title">Descubre las marcas</h1>
+        <p class="uk-section__subtitle">
+          Elige tu marca favorita y explora los modelos disponibles.
+        </p>
+      </div>
+      <div id="brands-grid" class="uk-grid uk-grid--brands"></div>
+    </section>
+
+    <!-- VISTA POR MARCA: LISTADO DE PRODUCTOS -->
+    <section id="products-section" class="uk-section" aria-label="Productos por marca">
+      <div class="uk-section__header uk-section__header--back">
+        <button id="back-to-brands" class="uk-link-back">&larr; Volver a marcas</button>
+        <div>
+          <h2 id="products-title" class="uk-section__title">Modelos</h2>
+          <p class="uk-section__subtitle">Filtrado por marca</p>
+        </div>
+      </div>
+      <div id="products-grid" class="uk-grid uk-grid--products"></div>
+    </section>
+
+    <!-- DETALLE DE PRODUCTO -->
+    <section id="product-detail-section" class="uk-section" aria-label="Detalle de producto">
+      <div class="uk-section__header uk-section__header--back">
+        <button id="back-to-products" class="uk-link-back">&larr; Volver a modelos</button>
+      </div>
+
+      <article class="uk-product">
+        <div class="uk-product__gallery">
+          <div class="uk-product__main-img">
+            <img id="product-main-image" src="" alt="Zapatilla seleccionada" />
+          </div>
+          <div id="product-thumbs" class="uk-product__thumbs"></div>
+        </div>
+
+        <div class="uk-product__info">
+          <p class="uk-product__brand" id="product-brand"></p>
+          <h1 class="uk-product__name" id="product-name"></h1>
+          <p class="uk-product__price">
+            <span id="product-price"></span> €
+          </p>
+
+          <button id="add-to-cart-btn" class="uk-btn uk-btn--primary">
+            Añadir al carrito
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <!-- CARRITO -->
+    <section id="cart-section" class="uk-section" aria-label="Carrito de compra">
+      <div class="uk-section__header uk-section__header--back">
+        <button id="back-from-cart" class="uk-link-back">&larr; Seguir comprando</button>
+        <h2 class="uk-section__title">Tu carrito</h2>
+      </div>
+
+      <div id="cart-items" class="uk-cart"></div>
+
+      <div class="uk-cart__footer">
+        <div class="uk-cart__total">
+          <span>Total:</span>
+          <strong><span id="cart-total">0.00</span> €</strong>
+        </div>
+        <button id="checkout-btn" class="uk-btn uk-btn--primary" disabled>
+          Finalizar pedido
+        </button>
+      </div>
+    </section>
+
+    <!-- FORMULARIO DE PEDIDO -->
+    <section id="checkout-section" class="uk-section" aria-label="Formulario de pedido">
+      <div class="uk-section__header uk-section__header--back">
+        <button id="back-to-cart" class="uk-link-back">&larr; Volver al carrito</button>
+        <h2 class="uk-section__title">Datos de envío</h2>
+      </div>
+
+      <form id="order-form" class="uk-form">
+        <div class="uk-form__group">
+          <label for="full-name">Nombre completo</label>
+          <input type="text" id="full-name" name="fullName" required />
+        </div>
+
+        <div class="uk-form__group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="uk-form__group">
+          <label for="phone">Teléfono</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+
+        <div class="uk-form__group">
+          <label for="city">Ciudad / Barrio</label>
+          <input type="text" id="city" name="city" required />
+        </div>
+
+        <div class="uk-form__group">
+          <label for="products-summary">Productos seleccionados</label>
+          <textarea id="products-summary" name="products" readonly></textarea>
+        </div>
+
+        <button type="submit" class="uk-btn uk-btn--primary">
+          Enviar pedido
+        </button>
+
+        <p id="order-message" class="uk-form__message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="uk-footer">
+    <p>&copy; 2025 UrbanKicks · Catálogo de zapatillas · Demo sin pagos</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
